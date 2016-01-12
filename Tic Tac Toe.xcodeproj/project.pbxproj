@@ -12,6 +12,7 @@
 		8CB06C7E1C40754C002E924D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8CB06C7C1C40754C002E924D /* Main.storyboard */; };
 		8CB06C801C40754C002E924D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8CB06C7F1C40754C002E924D /* Assets.xcassets */; };
 		8CB06C831C40754C002E924D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8CB06C811C40754C002E924D /* LaunchScreen.storyboard */; };
+		8CE859C61C448F1C00152E43 /* TicTacToeGame.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CE859C51C448F1C00152E43 /* TicTacToeGame.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +23,8 @@
 		8CB06C7F1C40754C002E924D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8CB06C821C40754C002E924D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8CB06C841C40754C002E924D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8CB06C8A1C40CB6E002E924D /* MyPlayground.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = MyPlayground.playground; sourceTree = "<group>"; };
+		8CE859C51C448F1C00152E43 /* TicTacToeGame.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TicTacToeGame.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -38,6 +41,7 @@
 		8CB06C6C1C40754B002E924D = {
 			isa = PBXGroup;
 			children = (
+				8CB06C8A1C40CB6E002E924D /* MyPlayground.playground */,
 				8CB06C771C40754B002E924D /* Tic Tac Toe */,
 				8CB06C761C40754B002E924D /* Products */,
 			);
@@ -57,6 +61,7 @@
 				8CB06C781C40754C002E924D /* AppDelegate.swift */,
 				8CB06C7A1C40754C002E924D /* ViewController.swift */,
 				8CB06C7C1C40754C002E924D /* Main.storyboard */,
+				8CE859C51C448F1C00152E43 /* TicTacToeGame.swift */,
 				8CB06C7F1C40754C002E924D /* Assets.xcassets */,
 				8CB06C811C40754C002E924D /* LaunchScreen.storyboard */,
 				8CB06C841C40754C002E924D /* Info.plist */,
@@ -136,6 +141,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8CE859C61C448F1C00152E43 /* TicTacToeGame.swift in Sources */,
 				8CB06C7B1C40754C002E924D /* ViewController.swift in Sources */,
 				8CB06C791C40754C002E924D /* AppDelegate.swift in Sources */,
 			);
@@ -287,6 +293,7 @@
 				8CB06C891C40754C002E924D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

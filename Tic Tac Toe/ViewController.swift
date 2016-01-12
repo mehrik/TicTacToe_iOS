@@ -9,17 +9,42 @@
 import UIKit
 
 class ViewController: UIViewController {
-
+    
+    var TTTG = TicTacToeGame()
+    
+    @IBOutlet var squares: [UIButton]!
+    @IBOutlet weak var winnerLabel: UILabel!
+    
+    // When you press a square
+    @IBAction func gameButtonPressed(sender: UIButton) {
+        let turnCount = TTTG.updateTicTacToeBoard(sender)
+        if turnCount >= 5 {
+            TTTG.checkRows(winnerLabel)
+            TTTG.checkColumns(winnerLabel)
+            TTTG.checkDiagonals(winnerLabel)
+        }
+        if winnerLabel.hidden == false {
+            for square in squares {
+                square.enabled = false
+            }
+        }
+    }
+    
+    @IBAction func resetButtonPressed(sender: UIButton) {
+        for square in squares {
+            square.enabled = true
+            square.backgroundColor = UIColor.lightGrayColor()
+        }
+        TTTG.reset(winnerLabel)
+    }
+    
+    // Override functions
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        TTTG.reset(winnerLabel)
     }
-
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
-
-
 }
 
