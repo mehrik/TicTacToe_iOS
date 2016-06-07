@@ -37,7 +37,7 @@ class TicTacToeGame {
         }
         colorRedWhenTrueFalseWhenBlue = !colorRedWhenTrueFalseWhenBlue
         square.enabled = false
-        ++turnCount
+        turnCount += 1
         return turnCount
     }
     
@@ -66,7 +66,7 @@ class TicTacToeGame {
     }
     
     func checkColumns(winnerLabel: UILabel) {
-        for var i = 0; i < 3 ; ++i {
+        for i in 0 ..< 3  {
             guard ticTacToeBoard[i] != 0 else { continue }
             guard ticTacToeBoard[i] == ticTacToeBoard[i + 3] else { continue }
             guard ticTacToeBoard[i] == ticTacToeBoard[i + 6] else { continue }

@@ -63,7 +63,7 @@ class Game: NSObject, NSCoding {
     func save() {
         var GamesFromStorage = Game.all()
         var exists = false
-        for var i = 0; i < GamesFromStorage.count; ++i {
+        for i in 0 ..< GamesFromStorage.count {
             if GamesFromStorage[i].createdAt == self.createdAt {
                 GamesFromStorage[i] = self
                 exists = true
