@@ -8,18 +8,22 @@
 
 import UIKit
 class TicTacToeGame {
-    var colorRedWhenTrueFalseWhenBlue: Bool
-    var turnCount: Int
-    var ticTacToeBoard: [Int]
+    var colorRedWhenTrueFalseWhenBlue: Bool = false
+    var turnCount: Int = 0
+    var ticTacToeBoard: [Int] = [0, 0, 0,
+        0, 0, 0,
+        0, 0, 0]
+
+    var names: [String] = ["", ""]
     
-    init() {
-        colorRedWhenTrueFalseWhenBlue = false
-        turnCount = 0
-        ticTacToeBoard = [0, 0, 0,
-                          0, 0, 0,
-                          0, 0, 0]
-    }
-    
+//    init() {
+//        colorRedWhenTrueFalseWhenBlue = false
+//        turnCount = 0
+//        ticTacToeBoard = [0, 0, 0,
+//                          0, 0, 0,
+//                          0, 0, 0]
+//    }
+
     func updateTicTacToeBoard(square: UIButton) -> Int {
         let index = square.tag
         if colorRedWhenTrueFalseWhenBlue {
@@ -43,6 +47,12 @@ class TicTacToeGame {
         ticTacToeBoard = [0, 0, 0,
                           0, 0, 0,
                           0, 0, 0]
+    }
+    
+    func checkGame(winnerLabel: UILabel) {
+        checkRows(winnerLabel)
+        checkColumns(winnerLabel)
+        checkDiagonals(winnerLabel)
     }
     
     func checkRows(winnerLabel: UILabel) {
@@ -87,9 +97,9 @@ class TicTacToeGame {
     func printWinner(color: Int, winnerLabel: UILabel) {
         let player: String
         if color == 1 {
-            player = "Red"
+            player = names[0]
         } else {
-            player = "Blue"
+            player = names[1]
         }
         winnerLabel.text = "Congrats \(player) Won!"
         winnerLabel.hidden = false

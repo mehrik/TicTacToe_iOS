@@ -8,8 +8,12 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class GameViewController: UIViewController {
     
+    @IBOutlet weak var redNameLabel: UILabel!
+    @IBOutlet weak var blueNameLabel: UILabel!
+    
+    weak var playerDelegate: DelegateProtocol?
     var TTTG = TicTacToeGame()
     
     @IBOutlet var squares: [UIButton]!
@@ -19,15 +23,15 @@ class ViewController: UIViewController {
     @IBAction func gameButtonPressed(sender: UIButton) {
         let turnCount = TTTG.updateTicTacToeBoard(sender)
         if turnCount >= 5 {
-            TTTG.checkRows(winnerLabel)
-            TTTG.checkColumns(winnerLabel)
-            TTTG.checkDiagonals(winnerLabel)
+            TTTG.checkGame(winnerLabel)
         }
         if winnerLabel.hidden == false {
             for square in squares {
                 square.enabled = false
             }
         }
+//        let move = Game(obj: TTTG)
+//        move.save()
     }
     
     @IBAction func resetButtonPressed(sender: UIButton) {
@@ -36,12 +40,23 @@ class ViewController: UIViewController {
             square.backgroundColor = UIColor.lightGrayColor()
         }
         TTTG.reset(winnerLabel)
+        
     }
     
     // Override functions
     override func viewDidLoad() {
         super.viewDidLoad()
         TTTG.reset(winnerLabel)
+        let names = playerDelegate?.sendNames()
+        redNameLabel.text = names![0]
+        blueNameLabel.text = names![1]
+        if let lastGame = Game.last()?.objective {
+            TTTG = lastGame
+        } else {
+            TTTG = TicTacToeGame()
+            TTTG.names = names!
+        }
+        
     }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
