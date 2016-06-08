@@ -224,7 +224,6 @@
                                 </variation>
                                 <connections>
                                     <action selector="resetButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="oCz-ln-8oh"/>
-                                    <action selector="resetGamePressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Mpi-ad-BsF"/>
                                     <segue destination="4CI-BE-4Zl" kind="show" id="3XX-80-5yK"/>
                                 </connections>
                             </button>
@@ -292,12 +291,12 @@
                                 <exclude reference="WMq-an-VHd"/>
                                 <exclude reference="o6e-32-w1A"/>
                                 <exclude reference="N0r-Xs-8iU"/>
+                                <exclude reference="hXX-08-cIa"/>
+                                <exclude reference="pyd-mh-KDp"/>
                                 <exclude reference="SYB-sl-fPp"/>
                                 <exclude reference="gTX-aO-cnF"/>
                                 <exclude reference="u5M-2b-ITC"/>
                                 <exclude reference="vQX-wV-QS5"/>
-                                <exclude reference="hXX-08-cIa"/>
-                                <exclude reference="pyd-mh-KDp"/>
                             </mask>
                         </variation>
                         <variation key="heightClass=compact">
@@ -306,24 +305,24 @@
                                 <include reference="WMq-an-VHd"/>
                                 <include reference="o6e-32-w1A"/>
                                 <exclude reference="r2d-zF-NG5"/>
+                                <exclude reference="Ibw-tH-6vN"/>
                                 <exclude reference="N8Z-wv-tH3"/>
                                 <exclude reference="dey-bp-2om"/>
                                 <include reference="ePZ-ol-j5D"/>
                                 <exclude reference="eul-tJ-zkW"/>
-                                <exclude reference="Ibw-tH-6vN"/>
-                                <include reference="gTX-aO-cnF"/>
-                                <include reference="u5M-2b-ITC"/>
                                 <exclude reference="5Bn-23-zhI"/>
                                 <exclude reference="Q5B-he-fNV"/>
                                 <include reference="hXX-08-cIa"/>
+                                <include reference="gTX-aO-cnF"/>
+                                <include reference="u5M-2b-ITC"/>
                             </mask>
                         </variation>
                         <variation key="heightClass=compact-widthClass=regular">
                             <mask key="constraints">
                                 <include reference="N0r-Xs-8iU"/>
+                                <include reference="pyd-mh-KDp"/>
                                 <exclude reference="SYB-sl-fPp"/>
                                 <include reference="vQX-wV-QS5"/>
-                                <include reference="pyd-mh-KDp"/>
                             </mask>
                         </variation>
                     </view>
@@ -341,9 +340,6 @@
                         <outletCollection property="squares" destination="TQj-qD-Lim" collectionClass="NSMutableArray" id="IRU-Kr-TTm"/>
                         <outletCollection property="squares" destination="AOo-Zd-R5U" collectionClass="NSMutableArray" id="FlX-l4-mrB"/>
                         <outletCollection property="squares" destination="ltj-6e-uPT" collectionClass="NSMutableArray" id="fd9-0e-ioE"/>
-                        <outletCollection property="portraitConstraints" destination="DrB-2j-Sh5" collectionClass="NSMutableArray" id="Ygg-Gx-qFV"/>
-                        <outletCollection property="portraitConstraints" destination="13z-jT-SVz" collectionClass="NSMutableArray" id="98B-Hb-hfM"/>
-                        <outletCollection property="portraitConstraints" destination="N8Z-wv-tH3" collectionClass="NSMutableArray" id="Jh2-wd-R2M"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

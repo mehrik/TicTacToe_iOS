@@ -56,7 +56,7 @@ class TicTacToeGame {
     }
     
     func checkRows(winnerLabel: UILabel) {
-        for var i = 0; i <= 6; i += 3 {
+        for i in 0.stride(through: 6, by: 3) {
             guard ticTacToeBoard[i] != 0 else { continue }
             guard ticTacToeBoard[i] == ticTacToeBoard[i + 1] else { continue }
             guard ticTacToeBoard[i] == ticTacToeBoard[i + 2] else { continue }
